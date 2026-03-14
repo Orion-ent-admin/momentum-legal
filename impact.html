@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Impact - Momentum</title>
+    <meta name="description" content="Momentum donates 10% of all net revenue to the National Multiple Sclerosis Society. See our contributions and impact.">
+    <meta property="og:title" content="Our Impact - Momentum">
+    <meta property="og:description" content="Every subscription fuels progress in the fight against Multiple Sclerosis. Momentum donates 10% of all net revenue.">
+    <meta property="og:type" content="website">
+    <style>
+        :root {
+            --orange-primary: #F56D22;
+            --orange-light: #FF8A47;
+            --orange-dark: #D4551A;
+            --red-accent: #E63946;
+            --bg-primary: #FAFAFA;
+            --bg-card: #FFFFFF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --text-tertiary: #86868B;
+            --border: rgba(0,0,0,0.06);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 14px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #000000;
+                --bg-card: #1C1C1E;
+                --text-primary: #F5F5F7;
+                --text-secondary: #A1A1A6;
+                --text-tertiary: #6E6E73;
+                --border: rgba(255,255,255,0.08);
+                --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+                --shadow-md: 0 4px 14px rgba(0,0,0,0.3);
+                --shadow-lg: 0 10px 40px rgba(0,0,0,0.4);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 24px 60px;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--orange-primary) 0%, var(--red-accent) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.12) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: var(--bg-primary);
+            border-radius: 24px 24px 0 0;
+        }
+
+        .hero-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .hero .subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.85);
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Content Container */
+        .content {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Total Contributed — Big Stat Card */
+        .total-card {
+            position: relative;
+            margin-top: -32px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            z-index: 10;
+            text-align: center;
+        }
+
+        .total-card .total-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-tertiary);
+            margin-bottom: 8px;
+        }
+
+        .total-card .total-amount {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--red-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .total-card .total-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .total-card .total-subtitle strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        .stat-card .value {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--orange-primary);
+            line-height: 1;
+        }
+
+        .stat-card .desc {
+            font-size: 12px;
+            color: var(--text-tertiary);
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        /* Section */
+        .section {
+            margin-top: 48px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-header .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-light));
+        }
+
+        .section-header .icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #FFFFFF;
+        }
+
+        .section-header h2 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--text-primary);
+        }
+
+        /* Contributions Table */
+        .contributions-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        .contribution-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.15s ease;
+        }
+
+        .contribution-row:last-child {
+            border-bottom: none;
+        }
+
+        .contribution-row:hover {
+            background: rgba(245, 109, 34, 0.03);
+        }
+
+        .contribution-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .contribution-info .date {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .contribution-info .recipient {
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        .contribution-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+        .contribution-amount {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--orange-primary);
+        }
+
+        .contribution-receipt {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        .contribution-receipt:hover {
+            color: var(--orange-primary);
+        }
+
+        .contribution-receipt svg {
+            width: 12px;
+            height: 12px;
+            fill: currentColor;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 48px 24px;
+        }
+
+        .empty-state .es-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(245, 109, 34, 0.1), rgba(230, 57, 70, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .empty-state .es-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--orange-primary);
+        }
+
+        .empty-state .es-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .empty-state p {
+            font-size: 15px;
+            color: var(--text-tertiary);
+            line-height: 1.5;
+        }
+
+        .empty-state .note {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            margin-top: 8px;
+        }
+
+        /* Story Section */
+        .story {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        .story p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .story p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .story .highlight-quote {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-primary);
+            border-left: 3px solid var(--orange-primary);
+            padding-left: 16px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .story .signature {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .story .signature span {
+            display: block;
+            font-weight: 400;
+            font-size: 13px;
+            color: var(--text-tertiary);
+            margin-top: 2px;
+        }
+
+        /* Recipient Badge */
+        .recipient-badge {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        .recipient-logo {
+            flex-shrink: 0;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--red-accent));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .recipient-logo svg {
+            width: 28px;
+            height: 28px;
+            fill: #FFFFFF;
+        }
+
+        .recipient-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .recipient-info p {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            line-height: 1.4;
+        }
+
+        .recipient-info a {
+            font-size: 13px;
+            color: var(--orange-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .recipient-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .step-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .step-content h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            line-height: 1.4;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            margin-top: 48px;
+            padding: 36px 28px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+        }
+
+        .cta-section h3 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .cta-section p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--red-accent));
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            box-shadow: 0 4px 16px rgba(245, 109, 34, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px rgba(245, 109, 34, 0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .cta-button svg {
+            width: 20px;
+            height: 20px;
+            fill: #FFFFFF;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 48px 24px 40px;
+            margin-top: 48px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+            margin-bottom: 6px;
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            line-height: 1.5;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange-primary);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 20px 48px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero .subtitle {
+                font-size: 16px;
+            }
+            .total-card .total-amount {
+                font-size: 44px;
+            }
+            .recipient-badge {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <!-- Replace src with your actual app icon URL when hosted -->
+        <img src="https://raw.githubusercontent.com/orion-ent-admin/momentum-legal/main/AppIcon.png" alt="Momentum App Icon" class="hero-logo" onerror="this.style.display='none'">
+        <h1>Our Impact</h1>
+        <p class="subtitle">Every subscription fuels progress in the fight against Multiple Sclerosis.</p>
+    </section>
+
+    <div class="content">
+
+        <!-- Total Contributed — Big Card -->
+        <div class="total-card animate-in delay-1">
+            <div class="total-label">Total Contributed</div>
+            <div class="total-amount">$0</div>
+            <p class="total-subtitle">
+                Our first contribution is coming <strong>January 2027</strong>.
+                <br>We contribute biannually — every January and July.
+            </p>
+        </div>
+
+        <div class="stats-row animate-in delay-1">
+            <div class="stat-card">
+                <div class="value">10%</div>
+                <div class="desc">Of All Net Revenue</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">Jan 2027</div>
+                <div class="desc">Next Contribution</div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="section animate-in delay-2">
+            <div class="section-header">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                </div>
+                <h2>How It Works</h2>
+            </div>
+            <div class="how-it-works">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>You Subscribe</h4>
+                        <p>Choose a Momentum Premium plan that works for you — monthly or yearly.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>We Set Aside 10%</h4>
+                        <p>Every dollar of net revenue is tracked. Ten percent is earmarked for donation.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>We Donate Biannually</h4>
+                        <p>Each January and July, we donate to the National MS Society. Receipts are published here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contribution History -->
+        <div class="section animate-in delay-3">
+            <div class="section-header">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                </div>
+                <h2>Contribution History</h2>
+            </div>
+
+            <div class="contributions-card">
+                <!--
+                    When contributions are made, add rows here:
+
+                <div class="contribution-row">
+                    <div class="contribution-info">
+                        <span class="date">January 2027</span>
+                        <span class="recipient">National MS Society</span>
+                    </div>
+                    <div class="contribution-right">
+                        <span class="contribution-amount">$XX.XX</span>
+                        <a href="#" class="contribution-receipt">
+                            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+                            View receipt
+                        </a>
+                    </div>
+                </div>
+                -->
+
+                <div class="empty-state">
+                    <div class="es-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <div class="es-title">Our first contribution is coming soon.</div>
+                    <p>Contributions are made biannually every January and July.</p>
+                    <p class="note">Receipts will be published here with each donation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Story -->
+        <div class="section animate-in delay-4">
+            <div class="section-header">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <h2>Our Story</h2>
+            </div>
+            <div class="story">
+                <p>Momentum was built by a United States Marine Corps veteran living with Multiple Sclerosis. What started as a personal tool to manage daily habits and routines became something bigger — an app designed to help anyone build the structure and consistency that makes life more manageable.</p>
+                <p>MS affects nearly 1 million people in the United States. There is no cure, but research is making real progress every year. We believe that even small, consistent contributions can drive meaningful change — the same philosophy behind the app itself.</p>
+                <div class="highlight-quote">
+                    That's why we commit 10% of all net revenue to the National Multiple Sclerosis Society. Not sometimes. Every time. It's part of who we are.
+                </div>
+                <div class="signature">
+                    Forest Konwerski
+                    <span>Founder, Momentum &middot; USMC Veteran</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Where It Goes -->
+        <div class="section animate-in delay-5">
+            <div class="section-header">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <h2>Where It Goes</h2>
+            </div>
+            <div class="recipient-badge">
+                <div class="recipient-logo">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div class="recipient-info">
+                    <h3>National Multiple Sclerosis Society</h3>
+                    <p>Funding research, driving change, and improving lives for people affected by MS.</p>
+                    <a href="https://www.nationalmssociety.org" target="_blank" rel="noopener">nationalmssociety.org &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section animate-in delay-6">
+            <h3>Build Better Habits. Make a Difference.</h3>
+            <p>Every Momentum subscription directly supports MS research. Start building habits that matter — for you and for others.</p>
+            <a href="https://apps.apple.com/app/momentum-habit-tracker/id6740043esti" class="cta-button">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                Download on the App Store
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">Momentum</div>
+        <p>Built with purpose. Every day matters.</p>
+        <div class="footer-links">
+            <a href="https://orion-ent-admin.github.io/momentum-legal/privacy-policy">Privacy Policy</a>
+            <a href="https://orion-ent-admin.github.io/momentum-legal/terms-of-service">Terms of Service</a>
+            <a href="https://orion-ent-admin.github.io/momentum-legal/support">Support</a>
+        </div>
+        <p style="margin-top: 16px; font-size: 12px;">&copy; 2026 Orion Enterprises LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
