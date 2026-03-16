@@ -1,13 +1,13 @@
 {
-  "totalAmount": "$247.50",
-  "nextContribution": "January 2027",
-  "contributions": [
-    {
-      "date": "January 2027",
-      "recipient": "National MS Society",
-      "amount": "247.50",
-      "receiptFile": "receipts/Jan-2027.pdf",
-    }
-  ]
+    "totalAmount": "$247.50",
+    "nextContribution": "January 2027",
+    "contributions": [
+        {
+            "date": "January 2027",
+            "recipient": "National MS Society",
+            "amount": "$247.50",
+            "receiptFile": "receipts/Jan-2027.pdf"
+        }
+    ]
 }
 
