@@ -33,3 +33,12 @@ After the second donation:
         }
     ]
 }
+
+
+When updating:
+1. Clone to GitHub Desktop or Visual Studio Code
+2. Add appropriate receipt pdf
+3. Update .json according above
+4. Commit and push changes
+   4.1. If using GitHub Desktop and Visual Studio Code, make sure to confirm pending push in desktop.
+   4.2. Confirm on web respoitory.
