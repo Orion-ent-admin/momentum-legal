@@ -49,14 +49,14 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last Updated: February 9, 2026</p>
+    <p class="last-updated">Last Updated: April 15, 2026</p>
 
     <div class="highlight">
-        <strong>Your Privacy Matters:</strong> Momentum is designed with privacy at its core. All your data stays on your device. We don't collect, store, or share any of your personal information.
+        <strong>Your Privacy Matters:</strong> Momentum is designed with privacy at its core. Your data is stored on your device and optionally synced across your devices using Apple's iCloud (CloudKit). We do not operate our own servers, and we cannot read or access your synced data.
     </div>
 
     <h2>1. Introduction</h2>
-    <p>Welcome to Momentum, developed by Orion Column ("we," "our," or "us"). This Privacy Policy explains how we handle information when you use our iOS mobile application ("the App").</p>
+    <p>Welcome to Momentum, developed by Orion Column ("we," "our," or "us"). This Privacy Policy explains how we handle information when you use our iOS and watchOS application ("the App").</p>
     <p>By using Momentum, you agree to the practices described in this Privacy Policy.</p>
 
     <h2>2. Information Collection and Storage</h2>
@@ -67,23 +67,35 @@
         <li><strong>Habits:</strong> Your custom habit titles, schedules, colors, and descriptions</li>
         <li><strong>Routines:</strong> Your routine steps, schedules, and completion records</li>
         <li><strong>Goals:</strong> Your goal titles, progress data, and milestones</li>
+        <li><strong>Events:</strong> Your scheduled events, categories, and reminders</li>
+        <li><strong>Daily Briefs:</strong> Your daily notes and reflections</li>
         <li><strong>Completion Records:</strong> Timestamps of when you complete habits and routines</li>
         <li><strong>App Preferences:</strong> Theme settings, notification preferences, and app configuration</li>
     </ul>
 
-    <h3>2.2 Where Your Data is Stored</h3>
-    <p><strong>All data is stored locally on your device using Apple's SwiftData framework.</strong></p>
+    <h3>2.1.1 Sign in with Apple</h3>
+    <p>Momentum offers optional Sign in with Apple for account authentication. When you sign in, Apple may provide us with:</p>
     <ul>
-        <li>✅ Your data <strong>never leaves your device</strong></li>
-        <li>✅ We do <strong>not have servers</strong> or databases</li>
-        <li>✅ We <strong>cannot access</strong> your data</li>
-        <li>✅ Your data is <strong>protected by your device's security</strong> (encryption, Face ID, etc.)</li>
+        <li><strong>Name:</strong> Your first and last name (only provided on first sign-in; you may choose to hide it)</li>
+        <li><strong>Email:</strong> Your email address or an Apple-generated private relay address</li>
+        <li><strong>User Identifier:</strong> A unique, anonymous identifier tied to your Apple Account</li>
     </ul>
+    <p>This information is stored locally on your device and synced via iCloud (see Section 2.2). We do not store this information on any servers we operate.</p>
+
+    <h3>2.2 Where Your Data is Stored</h3>
+    <p><strong>Your data is stored locally on your device using Apple's SwiftData framework and automatically synced across your devices via Apple's iCloud (CloudKit).</strong></p>
+    <ul>
+        <li>✅ Your data is stored <strong>on your device and in your private iCloud account</strong></li>
+        <li>✅ iCloud data is stored in your <strong>private CloudKit database</strong> — only accessible by devices signed into your Apple Account</li>
+        <li>✅ We do <strong>not operate servers</strong> or databases — syncing is handled entirely by Apple</li>
+        <li>✅ We <strong>cannot access</strong> your synced data</li>
+        <li>✅ Your data is <strong>protected by Apple's iCloud encryption</strong> and your device's security (passcode, Face ID, etc.)</li>
+    </ul>
+    <p>iCloud sync requires an active Apple Account with iCloud enabled. If you disable iCloud for Momentum, your data will remain stored locally on your device only.</p>
 
     <h3>2.3 What We DON'T Collect</h3>
-    <p>We do not collect, transmit, or have access to:</p>
+    <p>We do not collect, transmit to our own servers, or have access to:</p>
     <ul>
-        <li>❌ Personal identifiable information (name, email, phone number, address)</li>
         <li>❌ Location data</li>
         <li>❌ Photos or media from your device</li>
         <li>❌ Contacts or calendar information</li>
@@ -93,13 +105,14 @@
     </ul>
 
     <h2>3. How We Use Information</h2>
-    <p>Since all data stays on your device, <strong>we don't use your information</strong>. Your data is used solely by the App on your device to:</p>
+    <p>Since your data is stored on your device and in your private iCloud account, <strong>we don't use your information</strong>. Your data is used solely by the App on your devices to:</p>
     <ul>
-        <li>Display your habits, routines, and goals</li>
+        <li>Display your habits, routines, goals, and events</li>
         <li>Track your completion history and streaks</li>
         <li>Generate progress reports and statistics</li>
         <li>Send local notifications (if you enable them)</li>
-        <li>Populate widgets on your home screen</li>
+        <li>Populate widgets on your home screen and Apple Watch</li>
+        <li>Sync your data across your iPhone and Apple Watch via iCloud</li>
     </ul>
 
     <h2>4. Data Sharing and Third Parties</h2>
@@ -109,14 +122,16 @@
         <li>✅ No advertising networks</li>
         <li>✅ No data brokers</li>
         <li>✅ No marketing partners</li>
-        <li>✅ No cloud sync services</li>
+        <li>✅ No third-party cloud services (only Apple's iCloud)</li>
     </ul>
 
-    <p><strong>Exception - Apple Services:</strong> We use Apple's built-in frameworks for:</p>
+    <p><strong>Apple Services:</strong> We use Apple's built-in frameworks and services for:</p>
     <ul>
+        <li><strong>iCloud (CloudKit):</strong> Syncs your data across your devices using your private iCloud account. Data is stored in Apple's iCloud infrastructure and is subject to Apple's Privacy Policy</li>
+        <li><strong>Sign in with Apple:</strong> Optional account authentication (subject to Apple's Privacy Policy)</li>
         <li><strong>Subscriptions:</strong> Apple processes payments through the App Store (subject to Apple's Privacy Policy)</li>
         <li><strong>Notifications:</strong> Apple's notification system (if you enable notifications)</li>
-        <li><strong>Widgets:</strong> Apple's WidgetKit for displaying data on your home screen</li>
+        <li><strong>Widgets:</strong> Apple's WidgetKit for displaying data on your home screen and Apple Watch</li>
     </ul>
     <p>These services are governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
@@ -126,11 +141,12 @@
     <p>You have complete access to all your data at any time through the App interface.</p>
 
     <h3>5.2 Delete Your Data</h3>
-    <p>You can delete your data in two ways:</p>
+    <p>You can delete your data in several ways:</p>
     <ul>
-        <li><strong>Individual items:</strong> Delete any habit, routine, or goal from within the App</li>
+        <li><strong>Individual items:</strong> Delete any habit, routine, goal, or event from within the App</li>
         <li><strong>All data:</strong> Go to Settings → Data Management → Delete All Data</li>
-        <li><strong>Complete removal:</strong> Uninstalling the App permanently removes all data from your device</li>
+        <li><strong>Complete removal:</strong> Uninstalling the App removes all local data from your device</li>
+        <li><strong>iCloud data:</strong> To remove synced data from iCloud, go to your device's Settings → Apple Account → iCloud → Manage Storage → Momentum, or disable iCloud sync for the App</li>
     </ul>
 
     <h3>5.3 Data Portability & Export</h3>
@@ -217,16 +233,17 @@
     <p>Your data security is ensured by:</p>
     <ul>
         <li><strong>Device Security:</strong> Your data is protected by your device's built-in security (encryption, passcode, Face ID/Touch ID)</li>
-        <li><strong>No Transmission:</strong> Data never leaves your device, eliminating network security risks</li>
-        <li><strong>Apple's Framework:</strong> We use Apple's secure SwiftData framework for local storage</li>
+        <li><strong>iCloud Encryption:</strong> Data synced via iCloud is encrypted in transit and at rest using Apple's iCloud security infrastructure</li>
+        <li><strong>Private Database:</strong> Your CloudKit data is stored in a private database accessible only to devices signed into your Apple Account</li>
+        <li><strong>Apple's Framework:</strong> We use Apple's secure SwiftData framework for local storage and CloudKit for sync</li>
     </ul>
 
     <h2>11. International Users</h2>
-    <p>Momentum is available worldwide. Since all data is stored locally on your device:</p>
+    <p>Momentum is available worldwide. Your local data remains on your device. Data synced via iCloud is subject to Apple's data storage practices:</p>
     <ul>
-        <li>Your data remains in your physical location</li>
-        <li>No cross-border data transfers occur</li>
-        <li>You are protected by your local device security laws</li>
+        <li>Apple may store iCloud data in data centers located in various countries</li>
+        <li>iCloud data transfers and storage are governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a></li>
+        <li>We do not independently transfer your data across borders</li>
     </ul>
 
     <h2>12. Changes to This Privacy Policy</h2>
@@ -238,21 +255,23 @@
     <p>Continued use of the App after changes constitutes acceptance of the updated policy.</p>
 
     <h2>13. App Permissions</h2>
-    <p>Momentum may request the following iOS permissions:</p>
+    <p>Momentum may request the following permissions:</p>
     <ul>
-        <li><strong>Notifications:</strong> To remind you about habits and routines (optional)</li>
+        <li><strong>Notifications:</strong> To remind you about habits, routines, events, and goals (optional)</li>
+        <li><strong>iCloud:</strong> To sync your data across your iPhone and Apple Watch (requires iCloud to be enabled for Momentum in your device settings)</li>
         <li><strong>Face ID/Touch ID:</strong> For secure app access (if you enable app lock features)</li>
     </ul>
     <p>All permissions are optional and can be managed in your device's Settings app.</p>
 
     <h2>14. Data Retention</h2>
-    <p>Your data is retained on your device until you:</p>
+    <p>Your data is retained on your device and in your iCloud account until you:</p>
     <ul>
         <li>Manually delete it through the App</li>
         <li>Use the "Delete All Data" feature</li>
-        <li>Uninstall the App</li>
+        <li>Uninstall the App (removes local data; iCloud data may persist until you remove it from iCloud settings)</li>
+        <li>Remove Momentum data from iCloud via your device's iCloud storage settings</li>
     </ul>
-    <p>We do not have copies of your data and cannot recover it once deleted.</p>
+    <p>We do not have copies of your data on our own servers and cannot recover it once deleted.</p>
 
     <div class="contact">
         <h2>15. Contact Us</h2>
